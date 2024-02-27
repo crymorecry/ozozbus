@@ -2,26 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.LabelName{
+  color: rgb(124 58 237);
+  font-weight:1000;
+  font-size: 36px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*, ::before, ::after {
+  border-color: var(--chakra-colors-chakra-border-color);
+  overflow-wrap: break-word;
 }
-
+:root, body, html {
+  height: 100%;
+  --removed-body-scroll-bar-size: 0px!important;
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  position: relative;
+  min-height: 100%;
+  font-feature-settings: 'kern';
+  --removed-body-scroll-bar-size: 0px!important;
+}
+@media screen and (max-width: 1025px) {
+  .div_mobile {
+    visibility: visible;
+  }
+  }
+
+  @media screen and (min-width: 1025px) {
+    .div_mobile {
+      visibility: hidden;
+    }
+    }
+.header_blur{
+  background: rgba(0, 0, 0, 0);;
+  backdrop-filter: blur(10px);
+}
+
+.bg-blue{
+  background-color: #00a6e5;;
+  color: white;
+}
+.height-stores{
+  height: 180px;
+}
+
+.theme{
+  transition: 1s all ease;
+}
+
+.light {
+  background-color: #f8f8f8;
+  color: #111;
+}
+
+.dark {
+  background-color: #111;
+  color: #bbb;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
+  border-radius: 100%;
+}
+
+[data-theme=dark] ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 26px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+._next{
+  height: 100%;
 }
